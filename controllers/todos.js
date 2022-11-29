@@ -45,7 +45,7 @@ exports.createTodo = async (req, res, next) => {
 
 //@desc     Get Todo
 //@route    GET /api/v1/notebooks/:id
-//@access   Private
+//@access   Public
 exports.getTodo = async (req, res, next) => {
     try {
         const todo = await Todo.findById(req.params.id)
