@@ -1,7 +1,7 @@
 const Todo = require('../models/todo')
 
-//@desc     Get All Notebooks
-//@route    GET /api/v1/notebooks/
+//@desc     Get All Todos
+//@route    GET /api/v1/todos/
 //@access   Public
 exports.getAllTodos = async (req, res, next) => {
     try {
