@@ -6,8 +6,13 @@ const todoSchema = mongoose.Schema({
         required: [true, "Please provide title"]
     },
     isCompleted: {
-        type: String,
+        type: Boolean,
+        default: false,
         required: [true, "Please provide isCompleted"]
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
     }
 })
 
