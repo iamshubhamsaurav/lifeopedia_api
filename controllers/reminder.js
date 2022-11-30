@@ -46,7 +46,7 @@ exports.createReminder = async (req, res, next) => {
 //@desc     Get Reminder
 //@route    GET /api/v1/reminders/:id
 //@access   Public
-exports.getReminder = async (req, res, next) => {
+exports.getSingleReminder = async (req, res, next) => {
     try {
         const reminder = await Reminder.findById(req.params.id)
         if(!reminder) {
