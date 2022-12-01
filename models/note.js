@@ -11,6 +11,11 @@ const noteSchema = mongoose.Schema({
     },
     images: [String],
     featuredImage: [String],
+    notebook: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Notebook',
+        required: [true, "Please provide a nootebook"]
+    },
     createdAt: {
         type: Date,
         default: Date.now()
