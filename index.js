@@ -3,12 +3,19 @@ const dotenv = require('dotenv')
 const colors = require('colors')
 const morgan = require('morgan')
 
+// Database File
+const connectDB = require('./config/db')
+
+// Routers
 const journalsRouter = require('./routes/journals')
 const albumsRouter = require('./routes/albums')
 const todosRouter = require('./routes/todos')
 const notebooksRouter = require('./routes/notebooks')
 const notesRouter = require('./routes/notes')
 const remindersRouter = require('./routes/reminders')
+
+//Connecting to Database
+connectDB()
 
 const app = express()
 
