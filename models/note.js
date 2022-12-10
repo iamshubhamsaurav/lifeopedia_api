@@ -11,10 +11,10 @@ const noteSchema = mongoose.Schema({
     },
     images: [String],
     featuredImage: [String],
-    notebook: {
+    notebookId: {
         type: mongoose.Schema.ObjectId,
         ref: 'Notebook',
-        required: [true, "Please provide a nootebook"]
+        required: [true, "Note must belong to a Notebook. Please provide a nootebook"]
     },
     createdAt: {
         type: Date,

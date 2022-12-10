@@ -15,5 +15,10 @@ const imageSchema = mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now()
+    },
+    albumId: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'Album',
+        required: [true, "Image must belong to an Album. Please provide an Album"]
     }
 })
